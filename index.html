@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>성경 체크</title>
+    <link rel="stylesheet" href="normalize.css" />
+    <style>
+        @font-face {
+            font-family: 'Pretendard';
+            src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+            font-weight: 400;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Pretendard';
+            src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Medium.woff') format('woff');
+            font-weight: 500;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Pretendard';
+            src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-SemiBold.woff') format('woff');
+            font-weight: 600;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Pretendard';
+            src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Bold.woff') format('woff');
+            font-weight: 700;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Pretendard';
+            src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-ExtraBold.woff') format('woff');
+            font-weight: 800;
+            font-style: normal;
+        }
+
+        html, body{
+            height: 100%;
+            font-family: Pretendard;
+        }
+        body{
+            display: flex;
+            flex-direction: column;
+        }
+        header{
+            height: 50px;
+            min-height: 50px;
+            background: cyan;
+        }
+        main{
+            flex: 1;
+            display: flex;
+            align-items: stretch;
+            overflow: hidden;
+        }
+        nav{
+            width: 80px;
+            overflow-y: auto;
+        }
+        nav ul{
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            font-size: 18px;
+            font-weight: 900;
+            padding: 10px;
+        }
+        nav ul li{
+            margin-bottom: 10px;
+            border-radius: 5px;
+            padding: 10px 5px;
+            border: 1px solid #eee;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: .8;
+        }
+        nav ul li:last-of-type{
+            margin-bottom: 0;
+        }
+        nav ul li.old-book{
+            background: navy;
+            color: #fff;
+        }
+        nav ul li.new-book{
+            background: brown;
+            color: #fff;
+        }
+        
+        article{
+            flex: 1;
+            box-shadow: -1px 0 5px rgba(0, 0, 0, .2);
+        }
+    </style>
+</head>
+<body>
+    <header>성경 체크</header>
+    <main>
+        <nav>
+            <ul>
+                <li class="old-book">창출레</li>
+                <li class="old-book">민신수</li>
+                <li class="old-book">삿룻삼</li>
+                <li class="old-book">왕대스</li>
+                <li class="old-book">느에욥</li>
+                <li class="old-book">시잠전</li>
+                <li class="old-book">아사렘</li>
+                <li class="old-book">애겔단</li>
+                <li class="old-book">호욜암</li>
+                <li class="old-book">옵욘미</li>
+                <li class="old-book">나합습</li>
+                <li class="old-book">학슥말</li>
+
+                <li class="new-book">마막눅</li>
+                <li class="new-book">요행롬</li>
+                <li class="new-book">고갈엡</li>
+                <li class="new-book">빌골살</li>
+                <li class="new-book">딤딛몬</li>
+                <li class="new-book">히약벧</li>
+                <li class="new-book">요유계</li>
+            </ul>
+        </nav>
+        <article></article>
+    </main>
+</body>
+</html>
