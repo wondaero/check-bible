@@ -1,0 +1,359 @@
+[
+    {
+        "group": 1,
+        "books": [
+            {
+                "name": "창세기",
+                "chapter": 50
+            },
+            {
+                "name": "출애굽기",
+                "chapter": 40
+            },
+            {
+                "name": "레위기",
+                "chapter": 27
+            }
+        ]
+    },
+    {
+        "group": 2,
+        "books": [
+            {
+                "name": "민수기",
+                "chapter": 36
+            },
+            {
+                "name": "신명기",
+                "chapter": 34
+            },
+            {
+                "name": "여호수아",
+                "chapter": 24
+            }
+        ]
+    },
+    {
+        "group": 3,
+        "books": [
+            {
+                "name": "사사기",
+                "chapter": 21
+            },
+            {
+                "name": "룻기",
+                "chapter": 4
+            },
+            {
+                "name": "사무엘상",
+                "chapter": 31
+            },
+            {
+                "name": "사무엘하",
+                "chapter": 24
+            }
+        ]
+    },
+    {
+        "group": 4,
+        "books": [
+            {
+                "name": "열왕기상",
+                "chapter": 22
+            },
+            {
+                "name": "열왕기하",
+                "chapter": 25
+            },
+            {
+                "name": "역대상",
+                "chapter": 29
+            },
+            {
+                "name": "역대하",
+                "chapter": 36
+            },
+            {
+                "name": "에스라",
+                "chapter": 10
+            }
+        ]
+    },
+    {
+        "group": 5,
+        "books": [
+            {
+                "name": "느헤미야",
+                "chapter": 13
+            },
+            {
+                "name": "에스더",
+                "chapter": 10
+            },
+            {
+                "name": "욥기",
+                "chapter": 42
+            }
+        ]
+    },
+    {
+        "group": 6,
+        "books": [
+            
+            {
+                "name": "시편",
+                "chapter": 150
+            },
+            {
+                "name": "잠언",
+                "chapter": 31
+            },
+            {
+                "name": "전도서",
+                "chapter": 12
+            }
+        ]
+    },
+    {
+        "group": 7,
+        "books": [
+            {
+                "name": "아가",
+                "chapter": 8
+            },
+            {
+                "name": "이사야",
+                "chapter": 66
+            },
+            {
+                "name": "예레미야",
+                "chapter": 52
+            }
+        ]
+    },
+    {
+        "group": 8,
+        "books": [
+            {
+                "name": "예레미야애가",
+                "chapter": 5
+            },
+            {
+                "name": "에스겔",
+                "chapter": 48
+            },
+            {
+                "name": "다니엘",
+                "chapter": 12
+            }
+        ]
+    },
+    {
+        "group": 9,
+        "books": [
+            {
+                "name": "호세아",
+                "chapter": 14
+            },
+            {
+                "name": "요엘",
+                "chapter": 3
+            },
+            {
+                "name": "아모스",
+                "chapter": 9
+            }
+        ]
+    },
+    {
+        "group": 10,
+        "books": [
+            {
+                "name": "오바댜",
+                "chapter": 1
+            },
+            {
+                "name": "요나",
+                "chapter": 4
+            },
+            {
+                "name": "미가",
+                "chapter": 7
+            }
+        ]
+    },
+    {
+        "group": 11,
+        "books": [
+            {
+                "name": "나훔",
+                "chapter": 3
+            },
+            {
+                "name": "하박국",
+                "chapter": 3
+            },
+            {
+                "name": "스바냐",
+                "chapter": 3
+            }
+        ]
+    },
+    {
+        "group": 12,
+        "books": [
+            {
+                "name": "학개",
+                "chapter": 2
+            },
+            {
+                "name": "스가랴",
+                "chapter": 14
+            },
+            {
+                "name": "말라기",
+                "chapter": 4
+            }
+        ]
+    },
+    {
+        "group": 13,
+        "books": [
+            {
+                "name": "마태복음",
+                "chapter": 28
+            },
+            {
+                "name": "마가복음",
+                "chapter": 16
+            },
+            {
+                "name": "누가복음",
+                "chapter": 24
+            }
+        ]
+    },
+    {
+        "group": 14,
+        "books": [
+            {
+                "name": "요한복음",
+                "chapter": 21
+            },
+            {
+                "name": "사도행전",
+                "chapter": 28
+            },
+            {
+                "name": "로마서",
+                "chapter": 16
+            }
+        ]
+    },
+    {
+        "group": 15,
+        "books": [
+            {
+                "name": "고린도전서",
+                "chapter": 16
+            },
+            {
+                "name": "고린도후서",
+                "chapter": 13
+            },
+            {
+                "name": "갈라디아서",
+                "chapter": 6
+            },
+            {
+                "name": "에베소서",
+                "chapter": 6
+            }
+        ]
+    },
+    {
+        "group": 16,
+        "books": [
+            {
+                "name": "빌립보서",
+                "chapter": 4
+            },
+            {
+                "name": "골로새서",
+                "chapter": 4
+            },
+            {
+                "name": "데살로니가전서",
+                "chapter": 5
+            },
+            {
+                "name": "데살로니가후서",
+                "chapter": 3
+            }
+        ]
+    },
+    {
+        "group": 17,
+        "books": [
+            {
+                "name": "디모데전서",
+                "chapter": 6
+            },
+            {
+                "name": "디모데후서",
+                "chapter": 4
+            },
+            {
+                "name": "디도서",
+                "chapter": 3
+            },
+            {
+                "name": "빌레몬서",
+                "chapter": 1
+            }
+        ]
+    },
+    {
+        "group": 18,
+        "books": [
+            {
+                "name": "히브리서",
+                "chapter": 13
+            },
+            {
+                "name": "야고보서",
+                "chapter": 5
+            },
+            {
+                "name": "베드로전서",
+                "chapter": 5
+            },
+            {
+                "name": "베드로후서",
+                "chapter": 3
+            }
+        ]
+    },
+    {
+        "group": 20,
+        "books": [
+            {
+                "name": "요한일서",
+                "chapter": 5
+            },
+            {
+                "name": "요한이서",
+                "chapter": 1
+            },
+            {
+                "name": "요한삼서",
+                "chapter": 1
+            },
+            {
+                "name": "유다서",
+                "chapter": 1
+            }
+           
+        ]
+    }
+]
