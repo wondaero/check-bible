@@ -45,14 +45,14 @@
             display: flex;
             flex-direction: column;
         }
-        header{
+        .header{
             height: 50px;
             min-height: 50px;
             padding: 3px;
             box-sizing: border-box;
             background: #56301a;
         }
-        header h1{
+        .header h1{
             border: 2px dashed rgba(255, 255, 255, .5);
             display: flex;
             align-items: center;
@@ -129,9 +129,31 @@
         .check-board > section:last-of-type{
             margin-bottom: 0;
         }
-        .check-board section h3{
-            margin: 0;
+        .check-board section .book-header{
+            display: flex;
+            align-items: center;
             margin-bottom: 20px;
+            position: relative;
+        }
+        .check-board section .book-header h3{
+            margin: 0;
+        }
+        .check-board section .book-header input{
+            width: 25px;
+            height: 25px;
+            margin-right: 5px;
+        }
+        .check-board section .book-header button{
+        }
+        .check-board section .book-header .progress{
+            position: absolute;
+            bottom: -10px;
+            left: 5px;
+            right: 5px;
+            height: 4px;
+            background: rgba(0, 0, 0, .1);
+            border-radius: 4px;
+            transform: rotate(-3deg);
         }
         .check-board section ul li{
             display: inline-flex;
@@ -167,7 +189,7 @@
     </style>
 </head>
 <body>
-    <header><h1>성경 체크</h1></header>
+    <header class="header"><h1>성경 체크</h1></header>
     <main>
         <nav>
             <ul>
@@ -179,18 +201,20 @@
                 <li class="old-book"><label><input type="radio" value="6" name="books" /><span>시잠전</span></label></li>
                 <li class="old-book"><label><input type="radio" value="7" name="books" /><span>아사렘</span></label></li>
                 <li class="old-book"><label><input type="radio" value="8" name="books" /><span>애겔단</span></label></li>
-                <li class="old-book"><label><input type="radio" value="8" name="books" /><span>호욜암</span></label></li>
-                <li class="old-book"><label><input type="radio" value="9" name="books" /><span>옵욘미</span></label></li>
-                <li class="old-book"><label><input type="radio" value="10" name="books" /><span>나합습</span></label></li>
-                <li class="old-book"><label><input type="radio" value="11" name="books" /><span>학슥말</span></label></li>
+                <li class="old-book"><label><input type="radio" value="9" name="books" /><span>호욜암</span></label></li>
+                <li class="old-book"><label><input type="radio" value="10" name="books" /><span>옵욘미</span></label></li>
+                <li class="old-book"><label><input type="radio" value="11" name="books" /><span>나합습</span></label></li>
+                <li class="old-book"><label><input type="radio" value="12" name="books" /><span>학슥말</span></label></li>
 
-                <li class="new-book"><label><input type="radio" value="11" name="books" /><span>마막눅</span></label></li>
-                <li class="new-book"><label><input type="radio" value="12" name="books" /><span>요행롬</span></label></li>
-                <li class="new-book"><label><input type="radio" value="13" name="books" /><span>고갈엡</span></label></li>
-                <li class="new-book"><label><input type="radio" value="14" name="books" /><span>빌골살</span></label></li>
-                <li class="new-book"><label><input type="radio" value="15" name="books" /><span>딤딛몬</span></label></li>
-                <li class="new-book"><label><input type="radio" value="16" name="books" /><span>히약벧</span></label></li>
-                <li class="new-book"><label><input type="radio" value="17" name="books" /><span>요유계</span></label></li>
+
+
+                <li class="new-book"><label><input type="radio" value="13" name="books" /><span>마막눅</span></label></li>
+                <li class="new-book"><label><input type="radio" value="14" name="books" /><span>요행롬</span></label></li>
+                <li class="new-book"><label><input type="radio" value="15" name="books" /><span>고갈엡</span></label></li>
+                <li class="new-book"><label><input type="radio" value="16" name="books" /><span>빌골살</span></label></li>
+                <li class="new-book"><label><input type="radio" value="17" name="books" /><span>딤딛몬</span></label></li>
+                <li class="new-book"><label><input type="radio" value="18" name="books" /><span>히약벧</span></label></li>
+                <li class="new-book"><label><input type="radio" value="19" name="books" /><span>요유계</span></label></li>
             </ul>
         </nav>
         <article class="check-board"></article>
@@ -237,20 +261,63 @@
 
         const bookTmpl = (d) => {
             const section = document.createElement('section');
+
+            const header = document.createElement('header');
+            header.classList.add('book-header');
+
+            const progress = document.createElement('div');
+            progress.classList.add('progress');
+            progress.dataset.chapterCnt = d.chapter;
+
             const title = document.createElement('h3');
+
+            const allChker = document.createElement('input');
+            allChker.type = 'checkbox';
+            allChker.classList.add = 'all-checker';
+            allChker.addEventListener('change', e => {
+                e.target.closest('section').querySelectorAll('ul input').forEach(e2 => {
+                    e2.checked = e.target.checked;
+                })
+
+                if(e.target.checked) progress.style.background = '#36e722';
+                else progress.style.background = 'rgba(0, 0, 0, .1)';
+            })
+            
+
+            // const rangeBtn = document.createElement('button');
+
             title.textContent = d.name;
             const chapterList = document.createElement('ul');
-            section.appendChild(title);
+            section.appendChild(header);
+            header.appendChild(allChker);
+            header.appendChild(title);
+            header.appendChild(progress);
+            // header.appendChild(rangeBtn);
             section.appendChild(chapterList);
 
             for(let i = 0; i < +d.chapter; i++){
                 const li = document.createElement('li');
                 li.innerHTML = `
                     <label>
-                        <input type="checkbox" />
+                        <input type="checkbox" value="${i + 1}" />
                         <strong>${i + 1}</strong>
                     </label>
                 `;
+
+                li.querySelector('input').addEventListener('change', e => {
+                    const chapterCnt = +d.chapter;
+                    let chkedCnt = 0;
+                    
+                    const others = e.target.closest('ul').querySelectorAll('input');
+
+                    for(let i = 0; i < others.length; i++){
+                        if(others[i].checked) chkedCnt++;
+                    }
+
+                    allChker.checked = chapterCnt === chkedCnt;
+
+                    progress.style.background = `linear-gradient(to right, #36e722 ${chkedCnt / chapterCnt * 100}%, rgba(0, 0, 0, .1) 0)`;
+                })
 
                 chapterList.appendChild(li);
             }
